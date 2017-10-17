@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <head>
     <link rel="stylesheet" type="text/css" href="test.css">
     <title>Reservation</title>
@@ -16,7 +20,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
     position absolute;
     top 10em;
 ">
-    <form>
+    <form action="testsess.php" method="get">
         <div style ="
             position: absolute;
         ">
