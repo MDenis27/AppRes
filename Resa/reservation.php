@@ -20,7 +20,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
     position absolute;
     top 10em;
 ">
-    <form action="testsess.php" method="get">
+    <form action="client1.php" method="get">
         <div style ="
             position: absolute;
         ">
@@ -43,7 +43,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
             <br>
             <input type="text" name="number">
             <br>
-            <input id="checkBox" type="checkbox" >
+            <input id="checkBox" type="checkbox" name="insurance">
         </div>
         <div style="
             position: absolute;
