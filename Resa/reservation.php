@@ -16,17 +16,16 @@ The price is 10€ until 12 years and then 15€.
 <br>
 The price of the cancellation insurance is 20€ regardless of the number of passengers.
 <br>
-<div style="
-    position absolute;
-    top 10em;
-">
-    <form action="client1.php" method="get">
+<br>
+    <form action="passenger1.php" method="get">
         <div style ="
             position: absolute;
         ">
             Destination:
             <br>
+            <br>
             Number of passengers:
+            <br>
             <br>
             Cancellation insurance:
         </div>
@@ -41,15 +40,16 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
                 <option value="LFPG">Paris Charles De Gaulle</option>
             </select>
             <br>
+            <br>
             <input type="text" name="number">
+            <br>
             <br>
             <input id="checkBox" type="checkbox" name="insurance">
         </div>
         <div style="
             position: absolute;
-            top: 15em;
+            top: 17em;
         ">
         <input type="submit" value="Next step">
         </div>
     </form>
-</div>
