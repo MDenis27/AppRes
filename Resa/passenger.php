@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 
 // On teste si nos variables sont déclarées
 if (isset($_GET['destination']) && isset($_GET['number']) && isset($_GET['insurance'])) {

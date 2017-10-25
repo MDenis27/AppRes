@@ -1,5 +1,5 @@
 <?php
-session_start();
+$destination = unserialize($_SESSION['infodest']);
 ?>
 
 <head>
@@ -17,7 +17,7 @@ The price is 10€ until 12 years and then 15€.
 The price of the cancellation insurance is 20€ regardless of the number of passengers.
 <br>
 <br>
-    <form action="passenger1.php" method="get">
+    <form action="controler_client.php" method="get">
         <div style ="
             position: absolute;
         ">
@@ -41,7 +41,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
             </select>
             <br>
             <br>
-            <input type="text" name="number">
+            <input type="text" name="number" value="<?php echo($destination.getNumbPass())?>">
             <br>
             <br>
             <input id="checkBox" type="checkbox" name="insurance">
@@ -53,3 +53,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
         <input type="submit" value="Next step">
         </div>
     </form>
+    <a href="index.php">
+        <button>Cancel reservation</button>
+    </a>
+
