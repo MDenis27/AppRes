@@ -11,8 +11,8 @@ elseif (isset($_GET['destination']) && isset($_GET['number'])) {
 	$destination->setValues($_GET['destination'], isset($_GET['number']), false );
 	$_SESSION['infodest'] = serialize($destination);
 }
-else{
-	include'index.php';
+if (isset($_GET['name']) && isset($_GET['firstname']) && isset($_GET['age'])) {
+	//create a client -> liste de client pour checker si bien 5, crée un vide puis on initialise au fur et à mersure
 }
 if ($cont < $destination->getNumbPass()) {
 	$cont ++;
