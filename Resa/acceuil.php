@@ -17,7 +17,7 @@ The price is 10€ until 12 years and then 15€.
 The price of the cancellation insurance is 20€ regardless of the number of passengers.
 <br>
 <br>
-    <form action="controler_client.php" method="get">
+    <form action="index.php" method="get">
         <div style ="
             position: absolute;
         ">
@@ -41,7 +41,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
             </select>
             <br>
             <br>
-            <input type="text" name="number" value="<?php echo($destination.getNumbPass())?>">
+            <input type="text" name="number" >
             <br>
             <br>
             <input id="checkBox" type="checkbox" name="insurance">
@@ -52,8 +52,13 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
         ">
         <input type="submit" value="Next step">
         </div>
+        <input type="hidden" name="page" value="client">
     </form>
-    <a href="index.php">
+    <a href="index.php" style="
+        position: absolute;
+        top: 17em;
+        left: 5em;
+    ">
         <button>Cancel reservation</button>
     </a>
 
