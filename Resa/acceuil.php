@@ -64,7 +64,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
         position: absolute;
         top: 17em;
         left: 5em;
-    ">
+    " >
         <button>Cancel reservation</button>
     </a>
 

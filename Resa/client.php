@@ -1,15 +1,14 @@
 <?php
 $destination = unserialize($_SESSION['infodest']);
 $count = unserialize($_SESSION['count']);
-echo($destination->getDestName());
-echo($count);
-$_SESSION['infodest'] = serialize($destination)
+$_SESSION['infodest'] = serialize($destination);
+$_SESSION['count'] = serialize($count);
 ?>
 
 <head>
     <link rel="stylesheet" type="text/css" href="test.css">
-    <title>Pasenger</title>
-    <h1> Pasenger <?php echo($count) ?> </h1>
+    <title>Passenger</title>
+    <h1> Passenger <?php echo($count) ?> </h1>
 </head>
 
 <br>
@@ -23,7 +22,14 @@ $_SESSION['infodest'] = serialize($destination)
 	<br>
 	<input type="submit" value="Next step">
 	<br>
-	<input type="hidden" name="page" value="client">
+	<?php
+	if ($count < $destination->getNumbPass()){
+		?> <input type="hidden" name="page" value="confirmation"> <?php
+	}
+	else {
+		?> <input type="hidden" name="page" value="client"> <?php
+	}
+	?>
 </form>
 
 

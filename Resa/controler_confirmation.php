@@ -10,6 +10,5 @@ if(isset($_GET['name']) && isset($_GET['firstname']) && isset($_GET['age'])){
 	array_push($array, $pass);
 }
 
-echo($array);
 
 ?>
