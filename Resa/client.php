@@ -24,10 +24,10 @@ $_SESSION['count'] = serialize($count);
 	<br>
 	<?php
 	if ($count < $destination->getNumbPass()){
-		?> <input type="hidden" name="page" value="confirmation"> <?php
+		?> <input type="hidden" name="page" value="client"> <?php
 	}
 	else {
-		?> <input type="hidden" name="page" value="client"> <?php
+		?> <input type="hidden" name="page" value="confirmation"> <?php
 	}
 	?>
 </form>
