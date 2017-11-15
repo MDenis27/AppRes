@@ -1,6 +1,6 @@
 <?php
 include 'destinationClass.php';
-$cont = 0;
+$count = 0;
 $_SESSION['count'] = $count;
 $destination = unserialize($_SESSION['infodest']);
 
