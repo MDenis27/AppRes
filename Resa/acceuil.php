@@ -60,7 +60,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
         </div>
         <input type="hidden" name="page" value="client">
     </form>
-    <a href="index.php" style="
+    <a href="kill.php" style="
         position: absolute;
         top: 17em;
         left: 5em;
