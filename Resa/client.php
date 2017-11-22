@@ -51,8 +51,6 @@ $_SESSION['count'] = serialize($count);
 	}
 	?>
 </form>
-
-<?php //faire  ?>
 <a href="controler_client.php" style="
         position: absolute;
         top: 12em;

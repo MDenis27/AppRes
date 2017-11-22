@@ -62,11 +62,27 @@ $_SESSION['array'] = serialize($array);
 		position: absolute;;
 		top: 12em;
 	">
-<form>
+<form method="get" action="index.php">
 	<input type="submit" value="Confirm">
 	<input type="hidden" name="page" value="confirmation">
 </form>
 </div>
+
+<div style="
+        position: absolute;;
+        top: 12em;
+        left: 5em;
+    ">
+<form method="get" action="index.php">
+    <?php 
+    $array = [];
+    $_SESSION['array'] = serialize($array);
+    ?>
+    <input type="submit" value="Back to previous page">
+    <input type="hidden" name="page" value="client">
+</form>
+</div>
+
 <a href="index.php" style="
         position: absolute;
         top: 12em;
