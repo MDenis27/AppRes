@@ -1,13 +1,17 @@
-<?php
-include 'destinationClass.php';
-include 'personClass.php';
-$array = unserialize($_SESSION['array']);
+<head>
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <title>Validation</title>
+    <h1> Confirmation of reservations </h1>
+</head>
 
-if(isset($_GET['name']) && isset($_GET['firstname']) && isset($_GET['age'])){
-	$pass = new person;
-	$pass->setPerson($_GET['name'], $_GET['firstname'], $_GET['age']);
-	array_push($array, $pass);
-}
-$_SESSION['array'] = serialize($array);
-include 'confirmation.php';
-?>
+Your demand has been registered.
+<br>
+Please pay the 45€ sum on the bank account: 000-000000-00.
+<br>
+
+<a href="index.php" style="
+        position: absolute;
+    " >
+        <button>Confirm</button>
+</a>
+

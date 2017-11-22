@@ -47,7 +47,7 @@ $_SESSION['count'] = serialize($count);
 		?> <input type="hidden" name="page" value="client"> <?php
 	}
 	else {
-		?> <input type="hidden" name="page" value="confirmation"> <?php
+		?> <input type="hidden" name="page" value="validation"> <?php
 	}
 	?>
 </form>

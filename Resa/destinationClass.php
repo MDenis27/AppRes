@@ -15,6 +15,18 @@ class infoDestination
 
 	public function getDestName()
 	{
+		if ($this->destName == "EHAM"){
+			return "Amsterdam";
+		}
+		elseif ($this->destName == "LEBL") {
+			return "Barcelona";
+		}
+		elseif ($this->destName == "EDDB") {
+			return "Berlin";
+		}
+		elseif ($this->destName == "LFPG") {
+			return "Paris Charles de Gaule";
+		}
 		return $this->destName;
 	}
 

@@ -16,7 +16,7 @@ class person{
 		return $this->name;
 	}
 
-	public function getFirstame(){
+	public function getFirstname(){
 		return $this->firstname;
 	}
 

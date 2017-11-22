@@ -1,5 +1,6 @@
 <?php
 $destination = unserialize($_SESSION['infodest']);
+var_dump($destination);
 ?>
 
 <head>
