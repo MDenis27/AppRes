@@ -13,15 +13,35 @@ $_SESSION['count'] = serialize($count);
 
 <br>
 <form action="index.php" method="get">
-	<br>
+	<div style ="
+            position: absolute;
+        ">
+            Name:
+            <br>
+            <br>
+            Firstname:
+            <br>
+            <br>
+            Age:
+    </div>
+    <div style="
+        position: absolute;
+        left: 15em;
+    ">
 	<input type="text" name="name">
+	<br>
 	<br>
 	<input type="text" name="firstname">
 	<br>
+	<br>
 	<input type="text" name="age">
-	<br>
+	</div>
+	<div style="
+		position: absolute;
+		top: 12em;
+	">
 	<input type="submit" value="Next step">
-	<br>
+	</div>
 	<?php
 	if ($count < $destination->getNumbPass()){
 		?> <input type="hidden" name="page" value="client"> <?php
@@ -32,8 +52,20 @@ $_SESSION['count'] = serialize($count);
 	?>
 </form>
 
+<?php //faire  ?>
+<a href="controller_client.php" style="
+        position: absolute;
+        top: 12em;
+        left: 10em;
+    " >
+        <button>Cancel reservation</button>
+    </a>
 
 
-<a href="controler_client.php">
-	<button>Next step****</button>
-</a>
+<a href="index.php" style="
+        position: absolute;
+        top: 12em;
+        left: 10em;
+    " >
+        <button>Cancel reservation</button>
+    </a>

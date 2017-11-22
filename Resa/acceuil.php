@@ -48,7 +48,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
             <br>
             <br>
             <input id="checkBox" type="checkbox" name="insurance"
-            <?php if ($destination->getInssurance() == true){
+            <?php if ($destination->getInsurance() == true){
                 ?> checked<?php;
             }?>>
         </div>
@@ -60,7 +60,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
         </div>
         <input type="hidden" name="page" value="client">
     </form>
-    <a href="kill.php" style="
+    <a href="index.php" style="
         position: absolute;
         top: 17em;
         left: 5em;

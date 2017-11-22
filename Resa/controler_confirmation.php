@@ -10,5 +10,7 @@ if(isset($_GET['name']) && isset($_GET['firstname']) && isset($_GET['age'])){
 	array_push($array, $pass);
 }
 
+print_r($array);
+var_dump($destination->getNumbPass());
 
 ?>

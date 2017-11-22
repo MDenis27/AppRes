@@ -4,13 +4,13 @@ class infoDestination
 {
 	private $destName;
 	private $numbPass;
-	private $inssurance;
+	private $insurance;
 
 	public function __construct()
 	{
 		$this->destName = "";
 		$this->numbPass = 0;
-		$this->inssurance = false;
+		$this->insurance = false;
 	}
 
 	public function getDestName()
@@ -23,16 +23,16 @@ class infoDestination
 		return $this->numbPass;
 	}
 
-	public function getInssurance()
+	public function getInsurance()
 	{
-		return $this->inssurance;
+		return $this->insurance;
 	}
 
-	public function setValues($destName, $numbPass, $inssurance)
+	public function setValues($destName, $numbPass, $insurance)
 	{
 		$this->destName = $destName;
 		$this->numbPass = $numbPass;
-		$this->inssurance = $inssurance;
+		$this->insurance = $insurance;
 	}
 }
 ?>
