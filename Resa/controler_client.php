@@ -33,5 +33,4 @@ else{
 		include 'client.php';
 	}
 }
-
 ?>

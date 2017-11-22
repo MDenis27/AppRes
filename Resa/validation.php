@@ -58,13 +58,16 @@ else{
 $_SESSION['infodest'] = serialize($destination);
 $_SESSION['array'] = serialize($array);
 ?>
-<a href="index.php" value="confirmation" style="
-        position: absolute;
-        top: 12em;
-    " >
-        <button>Confirm</button>
-</a>
-<a href="index.php" value="acceuil" style="
+<div style="
+		position: absolute;;
+		top: 12em;
+	">
+<form>
+	<input type="submit" value="Confirm">
+	<input type="hidden" name="page" value="confirmation">
+</form>
+</div>
+<a href="index.php" style="
         position: absolute;
         top: 12em;
         left: 10em;

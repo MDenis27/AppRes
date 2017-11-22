@@ -53,19 +53,19 @@ $_SESSION['count'] = serialize($count);
 </form>
 
 <?php //faire  ?>
-<a href="controller_client.php" style="
+<a href="controler_client.php" style="
         position: absolute;
         top: 12em;
-        left: 10em;
+        left: 5em;
     " >
-        <button>Cancel reservation</button>
+        <button>Back to previous page</button>
     </a>
 
 
 <a href="index.php" style="
         position: absolute;
         top: 12em;
-        left: 10em;
+        left: 15em;
     " >
         <button>Cancel reservation</button>
     </a>
