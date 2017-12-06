@@ -4,6 +4,8 @@ if ($mysqli->connect_errno) {
     echo "Echec lors de la connexion à MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 echo $mysqli->host_info . "\n";
+$destination = unserialize($_SESSION["destination"]);
+$array = unserialize($_SESSION['array']);
 ?>
 
 <head>
@@ -17,8 +19,6 @@ Your demand has been registered.
 <br>
 Please pay the 
 <?php
-$destination = unserialize($_SESSION['infodest']);
-$array = unserialize($_SESSION['array']);
 $ins = $destination->getInsurance();
 $sum = 0;
 for ($i = 0; $i < $destination->getNumbPass(); $i++){
