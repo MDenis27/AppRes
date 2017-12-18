@@ -24,6 +24,11 @@ class person{
 		return $this->age;
 	}
 
+	public function getString(){
+		$string = $this->name." ".$this->firstname." ".$this->age;
+		return $string;
+	}
+
 	public function setPerson($name, $firstname, $age){
 		$this->name = $name;
 		$this->firstname = $firstname;

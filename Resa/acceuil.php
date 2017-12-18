@@ -3,7 +3,7 @@ $destination = unserialize($_SESSION['infodest']);
 ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Reservation</title>
     <h1> Reservation </h1>
 </head>
@@ -63,8 +63,12 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
     <a href="index.php" style="
         position: absolute;
         top: 17em;
-        left: 5em;
+        left: 15em;
     " >
         <button>Cancel reservation</button>
     </a>
+
+<?php
+$_SESSION['infodest'] = serialize($destination);
+?>
 

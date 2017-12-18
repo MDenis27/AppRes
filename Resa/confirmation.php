@@ -1,11 +1,11 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "applires");
+$mysqli = new mysqli("localhost", "root", "root", "applires");
 if ($mysqli->connect_errno) {
     echo "Echec lors de la connexion à MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
-echo $mysqli->host_info . "\n";
 $destination = unserialize($_SESSION['infodest']);
 $array = unserialize($_SESSION['array']);
+
 ?>
 
 
@@ -38,6 +38,30 @@ echo($sum);
  € sum on the bank account: 000-000000-00.
 <br>
 <br>
+
+<?php
+
+
+$size = count($array);
+$str = "";
+
+for ($i = 0; $i < $size; $i++){
+	$str.=$array[$i]->getString()." - ";
+}
+$ins = "No";
+
+if ($destination->getInsurance() != false){
+	$ins = "Yes";
+}
+$sqli = "INSERT INTO resa (destination, insurance, Total, Client) VALUES ('".$destination->getDestName()."','".$ins."','".$sum."', '".$str."')";
+
+if ($mysqli->query($sqli) === FALSE) {
+	echo "Error: " . $sqli . "<br>" . $mysqli->error;
+} 
+$mysqli->close();
+
+?>
+
 <a href="index.php" style="
         position: absolute;
     " >
