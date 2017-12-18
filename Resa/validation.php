@@ -4,14 +4,12 @@ $array = unserialize($_SESSION['array']);
 ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Validation</title>
     <h1> Validation of reservations </h1>
 </head>
 
-<h3><div style ="
-    position: absolute;
-">
+<h3><div style="float: left;">
 Destination
 <br>
 number of passenger
@@ -31,7 +29,6 @@ Cancellation insurance
 </div>
 
 <div style ="
-	position: absolute;
 	left: 15em;
 ">
 
@@ -54,25 +51,20 @@ else{
 }
 ?>
 </div><h3>
+
 <?php
 $_SESSION['infodest'] = serialize($destination);
 $_SESSION['array'] = serialize($array);
 ?>
-<div style="
-		position: absolute;;
-		top: 12em;
-	">
+
+<div style="float: left;">
 <form method="get" action="index.php">
 	<input type="submit" value="Confirm">
 	<input type="hidden" name="page" value="confirmation">
 </form>
 </div>
 
-<div style="
-        position: absolute;;
-        top: 12em;
-        left: 4em;
-    ">
+<div style="float: left;">
 <form method="get" action="index.php">
     <input type="submit" value="Back to previous page">
     <input type="hidden" name="page" value="client">
@@ -80,8 +72,6 @@ $_SESSION['array'] = serialize($array);
 </div>
 
 <a href="index.php" style="
-        position: absolute;
-        top: 12em;
         left: 12em;
     " >
         <button>Cancel reservation</button>

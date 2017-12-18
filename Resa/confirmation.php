@@ -10,7 +10,7 @@ $array = unserialize($_SESSION['array']);
 
 
 <head>
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Validation</title>
     <h1> Confirmation of reservations </h1>
 </head>

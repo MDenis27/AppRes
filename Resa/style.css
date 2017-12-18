@@ -1,0 +1,47 @@
+body {
+    background-color:black;
+    background-image:url(back7.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: #1E90FF;
+}
+
+
+
+h1 {
+    color: DimGray;
+    font-size:90px ;
+    text-align: center;
+    font-family: Georgia;
+    text-decoration: underline;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+p {
+	color: Gray;
+    text-align: justify;
+    font-size: 200%;
+}
+
+h2 {
+	color: Gray;
+    font-size:35px;
+    text-indent: 26px;
+}

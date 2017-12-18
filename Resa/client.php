@@ -6,7 +6,7 @@ $_SESSION['count'] = serialize($count);
 ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Passenger</title>
     <h1> Passenger <?php echo($count) ?> </h1>
 </head>
@@ -38,7 +38,7 @@ $_SESSION['count'] = serialize($count);
 	</div>
 	<div style="
 		position: absolute;
-		top: 12em;
+		top: 20em;
 	">
 	<input type="submit" value="Next step">
 	</div>
@@ -53,7 +53,7 @@ $_SESSION['count'] = serialize($count);
 </form>
 <a href="controler_client.php" style="
         position: absolute;
-        top: 12em;
+        top: 20em;
         left: 5em;
     " >
         <button>Back to previous page</button>
@@ -62,7 +62,7 @@ $_SESSION['count'] = serialize($count);
 
 <a href="index.php" style="
         position: absolute;
-        top: 12em;
+        top: 20em;
         left: 15em;
     " >
         <button>Cancel reservation</button>

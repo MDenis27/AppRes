@@ -8,9 +8,9 @@ $destination = unserialize($_SESSION['infodest']);
     <h1> Reservation </h1>
 </head>
 
-<h3>
+<h2>
     Please fill in the form below
-</h3>
+</h2>
 
 The price is 10€ until 12 years and then 15€.
 <br>
@@ -54,15 +54,15 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
         </div>
         <div style="
             position: absolute;
-            top: 17em;
+            top: 25em;
         ">
         <input type="submit" value="Next step">
         </div>
         <input type="hidden" name="page" value="client">
     </form>
-    <a href="index.php" style="
+    <a href="index.php" class="cancel" style="
         position: absolute;
-        top: 17em;
+        top: 25em;
         left: 15em;
     " >
         <button>Cancel reservation</button>

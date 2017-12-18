@@ -1,3 +1,7 @@
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
 <?php
 $mysqli = new mysqli("localhost", "root", "root", "applires");
 if ($mysqli->connect_errno) {
@@ -31,5 +35,4 @@ while ($line = $result->fetch_assoc()) {
 	echo "\t</tr>\n";
 }
 echo "</table>\n";
-
 ?>
