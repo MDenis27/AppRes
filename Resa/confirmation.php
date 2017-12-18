@@ -1,12 +1,13 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "reservation");
+$mysqli = new mysqli("localhost", "root", "", "applires");
 if ($mysqli->connect_errno) {
     echo "Echec lors de la connexion à MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 echo $mysqli->host_info . "\n";
-$destination = unserialize($_SESSION["destination"]);
+$destination = unserialize($_SESSION['infodest']);
 $array = unserialize($_SESSION['array']);
 ?>
+
 
 <head>
     <link rel="stylesheet" type="text/css" href="test.css">

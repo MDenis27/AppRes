@@ -71,13 +71,9 @@ $_SESSION['array'] = serialize($array);
 <div style="
         position: absolute;;
         top: 12em;
-        left: 5em;
+        left: 4em;
     ">
 <form method="get" action="index.php">
-    <?php 
-    $array = [];
-    $_SESSION['array'] = serialize($array);
-    ?>
     <input type="submit" value="Back to previous page">
     <input type="hidden" name="page" value="client">
 </form>
@@ -86,7 +82,7 @@ $_SESSION['array'] = serialize($array);
 <a href="index.php" style="
         position: absolute;
         top: 12em;
-        left: 10em;
+        left: 12em;
     " >
         <button>Cancel reservation</button>
 </a>
