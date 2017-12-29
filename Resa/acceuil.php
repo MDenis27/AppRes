@@ -1,11 +1,8 @@
 <?php
 $destination = unserialize($_SESSION['infodest']);
-$error = unserialize($_SESSION['error']);
-if (isset($error)){
-    echo $error;
-}
 ?>
 
+<!-- Head of the page -->
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Reservation</title>
@@ -21,6 +18,7 @@ The price is 10€ until 12 years and then 15€.
 The price of the cancellation insurance is 20€ regardless of the number of passengers.
 <br>
 <br>
+<!-- Main form -->
     <form action="index.php" method="get">
         <div style ="
             position: absolute;
@@ -37,6 +35,8 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
             position: absolute;
             left: 15em;
         ">
+
+        <!-- Fil in the form if still in the session -->
             <select name="destination"
             <?php  if (null !== $destination->getDestName()){
                 ?> value=<?php echo("\"".$destination->getDestName()."\"")?>
@@ -64,6 +64,9 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
         </div>
         <input type="hidden" name="page" value="client">
     </form>
+
+    <!-- Cancel button -->
+
     <a href="index.php" class="cancel" style="
         position: absolute;
         top: 25em;

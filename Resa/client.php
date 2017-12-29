@@ -12,6 +12,8 @@ $_SESSION['count'] = serialize($count);
 </head>
 
 <br>
+
+<!-- Main form -->
 <form action="index.php" method="get">
 	<div style ="
             position: absolute;
@@ -51,6 +53,8 @@ $_SESSION['count'] = serialize($count);
 	}
 	?>
 </form>
+
+<!-- Buton to go to the previous page -->
 <a href="controler_client.php" style="
         position: absolute;
         top: 20em;
@@ -59,11 +63,11 @@ $_SESSION['count'] = serialize($count);
         <button>Back to previous page</button>
     </a>
 
-
+<!-- Go to the first page -->
 <a href="index.php" style="
         position: absolute;
         top: 20em;
         left: 15em;
     " >
         <button>Cancel reservation</button>
-    </a>
+</a>

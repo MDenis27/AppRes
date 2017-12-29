@@ -1,3 +1,4 @@
+/*Color, position of background*/
 body {
     background-color:black;
     background-image:url(back7.jpg);
@@ -7,23 +8,7 @@ body {
 
 }
 
-/* unvisited link */
-a:link {
-    color: white;
-}
-
-/* visited link */
-a:visited {
-    color: white;
-}
-
-/* mouse over link */
-a:hover {
-    color: #1E90FF;
-}
-
-
-
+/*Head Title*/
 h1 {
     color: DimGray;
     font-size:90px ;
@@ -34,12 +19,14 @@ h1 {
     vertical-align: top;
 }
 
+/*Main Text*/
 p {
 	color: Gray;
     text-align: justify;
     font-size: 200%;
 }
 
+/*Sub Titles*/
 h2 {
 	color: Gray;
     font-size:35px;

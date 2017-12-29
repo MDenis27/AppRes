@@ -1,4 +1,5 @@
 <?php
+//Connect to database
 $mysqli = new mysqli("localhost", "root", "root", "applires");
 if ($mysqli->connect_errno) {
     echo "Echec lors de la connexion à MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
@@ -7,7 +8,6 @@ $destination = unserialize($_SESSION['infodest']);
 $array = unserialize($_SESSION['array']);
 
 ?>
-
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -19,6 +19,8 @@ Your demand has been registered.
 <br>
 <br>
 Please pay the 
+
+<!-- Compute the sum to pay -->
 <?php
 $ins = $destination->getInsurance();
 $sum = 0;
@@ -41,18 +43,21 @@ echo($sum);
 
 <?php
 
-
+//Fil in the database
 $size = count($array);
 $str = "";
 
+//Prepare string for "Name"
 for ($i = 0; $i < $size; $i++){
-	$str.=$array[$i]->getString()." - ";
+	$str.= " - ".$array[$i]->getString();
 }
 $ins = "No";
 
 if ($destination->getInsurance() != false){
 	$ins = "Yes";
 }
+
+//insert into database
 $sqli = "INSERT INTO resa (destination, insurance, Total, Client) VALUES ('".$destination->getDestName()."','".$ins."','".$sum."', '".$str."')";
 
 if ($mysqli->query($sqli) === FALSE) {
@@ -62,6 +67,7 @@ $mysqli->close();
 
 ?>
 
+<!-- Go back to first page -->
 <a href="index.php" style="
         position: absolute;
     " >

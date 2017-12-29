@@ -9,6 +9,7 @@ $array = unserialize($_SESSION['array']);
     <h1> Validation of reservations </h1>
 </head>
 
+<!-- Recap header -->
 <h3><div style="float: left;">
 Destination
 <br>
@@ -32,6 +33,7 @@ Cancellation insurance
 	left: 15em;
 ">
 
+<!-- Recap values -->
 <?php 
 echo($destination->getDestName());
 echo("<br>");
@@ -57,6 +59,7 @@ $_SESSION['infodest'] = serialize($destination);
 $_SESSION['array'] = serialize($array);
 ?>
 
+<!-- Submit the choice -->
 <div style="float: left;">
 <form method="get" action="index.php">
 	<input type="submit" value="Confirm">
@@ -64,6 +67,7 @@ $_SESSION['array'] = serialize($array);
 </form>
 </div>
 
+<!-- Go back to previous page -->
 <div style="float: left;">
 <form method="get" action="index.php">
     <input type="submit" value="Back to previous page">
@@ -71,6 +75,7 @@ $_SESSION['array'] = serialize($array);
 </form>
 </div>
 
+<!-- Cancel the reservation and go back to first page -->
 <a href="index.php" style="
         left: 12em;
     " >

@@ -1,5 +1,3 @@
-
-
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <?php
@@ -15,18 +13,15 @@ if ($result->num_rows == 0){
 	echo "No line found";
 	exit;
 }
-else{
-	echo "succeded";
-}
 
-/// Afficher des entêtes
+// Show head of columns
 echo "<table>\n<tr>";
 while ($finfo = $result->fetch_field()){
 	echo '<th>'. $finfo->name .'</th>'; 
 }
 echo "</tr>\n";
 
-// Afficher des résultats en HTML
+// Show results in HTML
 while ($line = $result->fetch_assoc()) {
 	echo "\t<tr>\n";
 	foreach ($line as $col_value) {
