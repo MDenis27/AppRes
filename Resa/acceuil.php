@@ -35,7 +35,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
         ">
             <select name="destination"
             <?php  if (null !== $destination->getDestName()){
-                ?> value="<?php echo($destination->getDestName())?>"
+                ?> value=<?php echo("\"".$destination->getDestName()."\"")?>
             <?php;}?>>
                 <option value="EHAM">Amsterdam</option>
                 <option value="LEBL">Barcelone</option>
@@ -44,7 +44,7 @@ The price of the cancellation insurance is 20€ regardless of the number of pas
             </select>
             <br>
             <br>
-            <input type="text" name="number" value="<?php echo($destination->getNumbPass())?>">
+            <input type="text" name="number" value=<?php echo("\"".$destination->getNumbPass()."\"")?> >
             <br>
             <br>
             <input id="checkBox" type="checkbox" name="insurance"
