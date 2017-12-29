@@ -1,5 +1,9 @@
 <?php
 $destination = unserialize($_SESSION['infodest']);
+$error = unserialize($_SESSION['error']);
+if (isset($error)){
+    echo $error;
+}
 ?>
 
 <head>

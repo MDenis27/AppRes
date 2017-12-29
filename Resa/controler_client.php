@@ -10,6 +10,18 @@ if (isset($_GET['destination']) && isset($_GET['number']) && isset($_GET['insura
 elseif (isset($_GET['destination']) && isset($_GET['number'])) {
 	$destination->setValues($_GET['destination'], ($_GET['number']), false );
 }
+
+if ($_GET['number'] < 1 ){
+	$error = "You must register at least one passenger!";
+	$_SESSION['error'] = serialize($error);
+	include 'controler_acceuil.php';
+}
+if ($_GET['number'] > 5){
+	$error = "You can't register more than 5 passengers!";
+	$_SESSION['error'] = serialize($error);
+	include 'controler_acceuil.php';
+}
+
 $_SESSION['infodest'] = serialize($destination);
 if (!isset($_SESSION['count'])){
 	$count = 1;
